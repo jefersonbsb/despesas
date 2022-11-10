@@ -1,0 +1,52 @@
+<div class="container mt-2">
+  <form method="post" action="/saveInsert">
+    <div class="columns">
+      <div class="column">
+        <label class="has-text-link is-size-5" for="">Número da Nota</label>
+        <input name="NumNota" class="input is-link is-focused" value="<%= despesaModel.numero_nota %>" type="text" placeholder="Número da Nota">
+      </div>
+      <div class="column">
+        <label class="has-text-link is-size-5" for="">Data da Nota</label>
+        <input name="DateNota" class="calendar" value="<%= despesaModel.data_nota %>"/>
+      </div>
+      <div class="column">
+        <label class="has-text-link is-size-5" for="">Data da Despesa</label>
+        <input name="DateDespesa" value="<%= despesaModel.data_despesas %>" class="calendar"/>
+      </div>
+      <div class="column">
+        <label class="has-text-link is-size-5" for="">Valor</label>
+        <input name="valor" value="<%= despesaModel.valor_nota%> " class="input is-link is-focused" type="text" placeholder="Valor">
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-6">
+        <label class="has-text-link is-size-5" for="">Despesa</label>
+        <input name="despesa" class="input is-link is-focused" type="text" value="<%= despesaModel.despesa %>" placeholder="Despesa">
+      </div>
+      <div class="column is-6">
+        <label class="has-text-link is-size-5" for="">Localidade</label>
+        <input name="localidade" class="input is-link is-focused" type="text" value="<%= despesaModel.localidade %>" placeholder="Localidade da Atividade">
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <label class="has-text-link is-size-5" for="">Descrição da atividade</label>
+        <textarea name="descricao" value="<%= despesaModel.descricao %>" class="textarea is-focused"></textarea>
+      </div>
+      <div class="column">
+        <label class="has-text-link is-size-5" for="">Observação</label>
+        <textarea name="obs" class="textarea is-focused" value="<%= despesaModel.observacao %>" ></textarea>
+      </div>
+    </div>
+
+    <div class="buttons ml-5">
+      <button type="submit" class="button is-primary">Salvar</button>
+      <button type="reset" class="button is-link">Limpar</button>
+      <button type="" class="button is-warning">Alterar</button>
+    </div>    
+  </form>
+
+  
+</div>

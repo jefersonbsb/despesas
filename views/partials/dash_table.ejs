@@ -1,0 +1,41 @@
+<div class="card-table">
+    <div class="content">
+        <table class="table is-fullwidth is-striped">
+            <tbody>
+                <tr>
+                    <th>Data da Nota</th>
+                    <th>Número da Nota</th>
+                    <th>Localidade</th>
+                    <th>Valor</th>
+                    <th>Descrição</th>
+                    <th>Alterar</th>
+                    <th>Excluir</th>
+                </tr>
+                
+                <% despesas.forEach(despesa => { %>
+
+                    <tr>
+                     <td><%= despesa.data_nota %></td>
+                     <td><%= despesa.numero_nota %></td>
+                     <td><%= despesa.localidade %></td>
+                     <td><%= despesa.valor_nota %></td>
+                     <td><%= despesa.descricao %></td>
+                     <td>
+                         <a class="button is-small is-primary mx-1" href="#">
+                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                         </a>
+                     </td>
+                     <td>
+                         <a class="button is-small is-danger" href="#">
+                             <i class="fa fa-trash" aria-hidden="true"></i>
+                         </a>
+                     </td> 
+                    </tr>
+                <% }); %>
+                
+            
+                
+            </tbody>
+        </table>
+    </div>
+</div>
